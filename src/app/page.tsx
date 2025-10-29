@@ -6,6 +6,9 @@ import Pricing from "../../components/Home/Pricing";
 import Navbar from "../../components/Layout/Navbar";
 
 
+
+
+
 export default function Home() {
   return (
     <div className="font-sans min-h-screen flex flex-col">

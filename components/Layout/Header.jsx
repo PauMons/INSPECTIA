@@ -10,7 +10,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide text-blue-400 drop-shadow-lg">
-          INSPECTIA
+          Servicios de Calidad de Software y Evaluador de Sitios Web
         </h1>
 
         
@@ -61,6 +61,12 @@ export default function Header() {
           <a href="/" className="block text-lg font-medium hover:text-blue-400 transition">Inicio</a>
           <a href="/about" className="block text-lg font-medium hover:text-blue-400 transition">Acerca de</a>
           <a href="/servicios" className="block text-lg font-medium hover:text-blue-400 transition">Servicios</a>
+          <nav className="flex gap-4 p-4 bg-gray-800 text-white">
+            <Link href="/">Inicio</Link>
+            <Link href="/quality-test/form">Nueva Prueba</Link>
+            <Link href="/quality-test/results">Histórico</Link>
+            <Link href="/quality-test/score">Último Puntaje</Link>
+          </nav>
           <a
             href="/contacto"
             className="block bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-transform transform hover:scale-105 shadow-md"
