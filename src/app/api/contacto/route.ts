@@ -7,6 +7,7 @@ export async function POST(req: Request) {
     await connectDB();
     const body = await req.json();
     console.log("Body recibido:", body);
+
     const nuevoMensaje = new Mensaje(body);
     await nuevoMensaje.save();
 
@@ -14,10 +15,14 @@ export async function POST(req: Request) {
       { message: "Mensaje guardado correctamente", data: nuevoMensaje },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error en API:", error);
+
+    const errMsg =
+      error instanceof Error ? error.message : "Error desconocido";
+
     return NextResponse.json(
-      { message: "Error al guardar el mensaje", error: error.message },
+      { message: "Error al guardar el mensaje", error: errMsg },
       { status: 500 }
     );
   }
