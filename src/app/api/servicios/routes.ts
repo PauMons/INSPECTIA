@@ -6,7 +6,7 @@ let servicios = [
   { id: 2, nombre: "Auditoría de Sistemas" },
 ];
 
-/
+
 export async function GET() {
   return NextResponse.json(servicios);
 }
