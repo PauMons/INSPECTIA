@@ -6,11 +6,9 @@ let servicios = [
   { id: 2, nombre: "Auditoría de Sistemas" },
 ];
 
-
 export async function GET() {
   return NextResponse.json(servicios);
 }
-
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -24,7 +22,6 @@ export async function POST(req: Request) {
     servicio: nuevoServicio,
   });
 }
-
 
 export async function DELETE(req: Request) {
   const { id } = await req.json();
